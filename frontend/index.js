@@ -24,12 +24,14 @@ import {
 } from 'CommonUtil/CommonUtil.js';
 import MSNotification from 'MSNotification/MSNotification.js';
 import rootReducer from 'Global/RootReducer.js';
+import scoreReducer from 'ScoreTable/ScoreReducer.js';
 // Initialize store
 
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   combineReducers({
     app:rootReducer,
+    score:scoreReducer,
     routing: routerReducer
   }),
   {}, /* initial state */
